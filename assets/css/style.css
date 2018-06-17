@@ -1,0 +1,128 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Open sans', 'Montserrat';
+    background: url('../img/gridcell.png');
+}
+
+.navbar {
+    background-color: #2b333f;
+    max-height: 50px;
+    background-color: #2b333f;
+    box-shadow: 0px 0px 20px 0px #ccc;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Montserrat', 'Open sans', sans-serif;
+    
+}
+.navbar #undo, .navbar #redo, .navbar #_clear {
+    background: transparent;
+    cursor: pointer;
+}
+
+.navbar #undo, .navbar #redo {
+    border-right: 1px solid #ccc;
+}
+
+#save, #load {
+    cursor: pointer;
+}
+
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 230px;
+    max-width: 250px;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+    background: transparent;
+    margin-right: 10px;
+}
+
+#sidebar .nav {
+    background: #ccc;
+    margin-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#sidebar .nav li .nav-link {
+    color: #fff;
+}
+
+#sidebar .nav-link {
+    font-family: 'Montserrat', 'Open sans', sans-serif;
+}
+
+#sidebar #palette {
+    height: 250px;
+    background: #eee;    
+    margin-top: 50px;
+    margin-left: 15px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: -1px -1px 10px 1px #aaa1a1;
+}
+
+#sidebar #palette-sidebar {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.logic-board {
+    background: transparent;
+    width: 100%;
+    min-height: 100%;
+}
+
+#diagram {
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.logic-board .zoom-holder {    
+    position: fixed;
+    width: 120px;
+    height: 40px;
+    border-radius: 88px;
+    top: 90%;
+    right: 10px;
+    z-index: 99999;
+    display: flex;
+    border: 1px solid #ccc;    
+}
+
+.logic-board .zoom-holder .left, .logic-board .zoom-holder .right {
+    width: 60px;
+    height: 100%;
+    background: #eee;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+
+.logic-board .zoom-holder .left {
+    border-right: 1px solid #ccc;    
+    border-top-left-radius: 88px;
+    border-bottom-left-radius: 88px;    
+}
+
+.logic-board .zoom-holder .right {
+    border-top-right-radius: 88px;
+    border-bottom-right-radius: 88px;
+}
+
+.logic-board .zoom-holder .left i, .logic-board .zoom-holder .right i {
+    font-size: 25px; 
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logic Simulator</title>
+  <meta name="description" content="A simple logic circuit editor and simulator." />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/opensans.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Scripts -->
+  <script src="assets/vendor/GoJS/go.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Logic Simulator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <button class="btn" disabled="disabled" id="undo" title="Undo">
+                  <span><i class="fa fa-undo"></i></span>
+              </button>
+            </li>
+            <li class="nav-item">
+                <button class="btn" disabled="disabled" id="redo" title="Redo">
+                    <span><i class="fa fa-repeat"></i></span>
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="btn" id="_clear" title="Clear">
+                    <span><i class="fa fa-eraser"></i></span>
+                </button>
+              </li>
+          </ul>
+        </div>
+        <div class="pull-right">
+          <button class="btn btn-outline-success" id="save" disabled="true">Save</button>
+          <button class="btn btn-outline-success" id="load">Load</button>
+          <div style="display:none" id="hide_">
+            <form>
+                <input type="file" name="files" id="loadButton" accept=".json, application/json">
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <aside id="sidebar">
+        <div id="palette">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active text-center" href="#">Logic Gate</a>
+            </li>
+          </ul>
+          <div id="palette-sidebar"></div>
+        </div>
+      </aside>
+      <div class="logic-board" id="diagram">
+        <div class="zoom-holder"></div>
+      </div>
+    </div>
+    <script src="assets/js/logic.js"></script>
+  </body>
+
+</html>
